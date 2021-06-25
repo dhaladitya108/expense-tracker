@@ -5,12 +5,12 @@ const Chart = (props) => {
     const dataPointValues = props.dataPoints.map(dataPoint => dataPoint.value);
     const totalMax = Math.max(...dataPointValues);
 
-    return <div className="char">
+    return <div className="chart">
         {props.dataPoints.map(dataPoint => <ChartBar
             key={dataPoint.id}
             value={dataPoint.value}
             maxValue={totalMax}
-            label={dataPoint.lable} />)}
+            label={dataPoint.label} />)}
     </div>
 }
 
